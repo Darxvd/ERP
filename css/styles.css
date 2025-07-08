@@ -1,0 +1,266 @@
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      margin: 0 auto;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+      .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      position: relative; 
+      text-decoration: none;
+      color: #228ECE;
+      font-weight: bold;
+      padding: 10px 10px;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-links a.active {
+    color: #134792;
+    }
+
+    .nav-links a:hover {
+      color: #134792;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #134792;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .whatsapp {
+      background-color: #00D648;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 1px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp, .facebook, .linkedin, .instagram i {
+      font-size: 20px;
+    }
+
+    .button-inscribete {
+      background-color: #00FAFD;
+      color: #134792;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .button-inscribete:hover {
+    animation: pulseFixed 0.8s ease infinite;
+    }
+
+    .top-nav {
+      background-color: #134792;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      padding: 5px 30px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .top-nav-content {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-nav .email {
+      margin-right: auto;
+      font-weight: normal;
+    }
+
+    .email i {
+      margin-right: 6px;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    .coperaire-link {
+      font-weight: 800;
+      font-size: 22px; 
+      padding: 5px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .coperaire-link:hover{
+      background-color: white;
+    }
+
+    .icon-copeaire {
+      height: 22px;
+      width: auto;
+      transform: translateY(5px); 
+      animation: flip 2s linear infinite;
+      transform-origin: center;
+      backface-visibility: hidden;
+    }
+
+    .seccion-formulario {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .fondo {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .contenedor {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .formulario-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .formulario-box h2 {
+      margin-top: 0;
+      color: #134792;
+    }
+
+    .campo {
+      margin-bottom: 15px;
+    }
+
+    .campo label {
+      display: block;
+      margin-bottom: 5px;
+      color: #134792;
+      font-weight: bold;
+    }
+
+    .campo input,
+    .campo textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .campo textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #134792;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0d376e;
+    }
+
+
+
+
+    @keyframes pulseFixed {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.10);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes flip {
+      0% {
+        transform: rotateY(0deg) translateY(3px);
+      }
+      100% {
+        transform: rotateY(360deg) translateY(3px);
+      }
+    }
