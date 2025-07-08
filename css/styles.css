@@ -211,6 +211,10 @@
         width: 100%;
       }
 
+        .email,
+      .bolsa-trabajo {
+        display: none !important;
+      }
 
       .menu-toggle {
         display: block;
