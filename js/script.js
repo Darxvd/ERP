@@ -20,12 +20,12 @@
         navbar.classList.add('fixed');
         placeholder.style.height = `${navbar.offsetHeight}px`;
     } else {
-        topNav.style.transform = 'translateY(0)';
-        topNav.style.position = 'relative';
-        topNav.style.top = '0';
+      topNav.style.transform = 'translateY(0)';
+      topNav.style.position = 'relative';
+      topNav.style.top = '0';
 
-        navbar.classList.remove('fixed');
-        placeholder.style.height = `0px`;
+      navbar.classList.remove('fixed');
+      placeholder.style.height = `0px`;
     }
 
     lastScrollY = currentScrollY;
