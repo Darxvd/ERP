@@ -33,25 +33,38 @@ window.addEventListener('scroll', () => {
   lastScrollY = currentScrollY;
 });
 
-// --- Slider con flechas, puntos y fade ---
+// --- Slider con flechas, puntos, fade y overlay sincronizado ---
+
+// Imágenes de fondo
 const images = [
-  'css/img/img1.jpg',
-  'css/img/img2.jpg',
-  'css/img/img3.jpg',
-  'css/img/img4.jpg'
+  'css/img/slider/img1.jpg',
+  'css/img/slider/img2.jpg',
+  'css/img/slider/img3.jpg',
+  'css/img/slider/img4.jpg'
+];
+
+// Imágenes overlay (como el chico en cada slide)
+const overlays = [
+  'css/img/slider/subslider/slideone.png',
+  'css/img/slider/subslider/slidetwo.png',
+  'css/img/slider/subslider/slidethree.png',
+  'css/img/slider/subslider/slidefour.png',
 ];
 
 let currentIndex = 0;
+
 const sliderImage = document.getElementById('slider-image');
+const overlayImage = document.getElementById('slider-overlay');
 const dotsContainer = document.getElementById('slider-dots');
 
-// Crear puntos dinámicamente
+// Crear puntos de navegación
 images.forEach((_, index) => {
   const dot = document.createElement('span');
   dot.addEventListener('click', () => showSlide(index));
   dotsContainer.appendChild(dot);
 });
 
+// Actualizar estilos de puntos
 function updateDots() {
   const dots = dotsContainer.querySelectorAll('span');
   dots.forEach((dot, i) => {
@@ -59,25 +72,37 @@ function updateDots() {
   });
 }
 
+// Mostrar slide específico
 function showSlide(index) {
   if (index >= images.length) currentIndex = 0;
   else if (index < 0) currentIndex = images.length - 1;
   else currentIndex = index;
 
-  // Fade out
   sliderImage.classList.remove('visible');
+  overlayImage.classList.remove('visible');
 
   setTimeout(() => {
     sliderImage.src = images[currentIndex];
+    overlayImage.src = overlays[currentIndex];
+
     sliderImage.classList.add('visible');
+    overlayImage.classList.add('visible');
+
     updateDots();
-  }, 200); // Tiempo debe coincidir con el CSS transition (~200ms)
+  }, 200);
 }
 
+// Navegar entre slides
 function changeSlide(direction) {
   showSlide(currentIndex + direction);
 }
 
-// Inicializar slider
+// Inicializar
 sliderImage.classList.add('visible');
+overlayImage.classList.add('visible');
 showSlide(currentIndex);
+
+// Auto-slide cada 10 segundos
+setInterval(() => {
+  changeSlide(1);
+}, 10000);
