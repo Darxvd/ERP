@@ -9,48 +9,47 @@
  <title>Escuela de Refrigeración del Perú</title>
 </head>
 <body>
-    <nav>
-        <div class="top-nav">
+    <!--Top-navbar-->
+    <div class="top-nav">
         <div class="top-nav-content">
             <div class="email">
-            <a><i class="bi bi-envelope"></i> informes@escueladerefrigeraciondelperu.edu.pe</a>
+                <a><i class="bi bi-envelope"></i> informes@escueladerefrigeraciondelperu.edu.pe</a>
             </div>
             <a href="#" class="bolsa-trabajo">BOLSA DE TRABAJO</a>
             <div class="redes-contacto">
-            <a class="facebook"><i class="bi bi-facebook"></i></a>
-            <a class="linkedin"><i class="bi bi-linkedin"></i></a>
-            <a class="instagram"><i class="bi bi-instagram"></i></a>
-            <a class="whatsapp" target="_blank">
-                <i class="bi bi-whatsapp"></i> 917484479
-            </a>
+                <a class="facebook"><i class="bi bi-facebook"></i></a>
+                <a class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a class="instagram"><i class="bi bi-instagram"></i></a>
+                <a class="whatsapp" target="_blank">
+                    <i class="bi bi-whatsapp"></i> 917484479
+                </a>
             </div>
         </div>
-        </div>
-
+    </div>
+    <!--Navbar-->
+    <nav>
         <div class="navbar">
-        <div class="navbar-left">
-            <img src="css/img/LOGO-ERP.png" alt="Logo" class="logo" />
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <div class="nav-links">
-            <a href="#" class="active">INICIO</a>
-            <a href="#">NOSOTROS</a>
-            <a href="#">CURSOS</a>
-            <a href="#">CONTÁCTANOS</a>
-            <a href="#">BECAS</a>
+            <div class="navbar-left">
+                <img src="css/img/LOGO-ERP.png" alt="Logo" class="logo" />
+                    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <div class="nav-links">
+                    <a href="#" class="active">INICIO</a>
+                    <a href="#">NOSOTROS</a>
+                    <a href="#">CURSOS</a>
+                    <a href="#">CONTÁCTANOS</a>
+                    <a href="#">BECAS</a>
+                </div>
             </div>
-        </div>
-        <div class="navbar-right">
-            <a href="#" class="button-inscribete">I N S C R Í B E T E</a>
-        </div>
+            <div class="navbar-right">
+                <a href="#" class="button-inscribete">I N S C R Í B E T E</a>
+            </div>
         </div>
     </nav>
-
-    <a href="https://wa.me/51917484479" class="whatsapp-float" target="_blank">
-        <i class="bi bi-whatsapp"></i>
-    </a>
+    <!--Aplicado para el js del navbar-->
+    <div class="placeholder-navbar"></div>
 
 
-    <!--<div class="seccion-formulario">
+    <div class="seccion-formulario">
     <img src="css/img/fondo.jpg" alt="Fondo" class="fondo">
     
     <div class="contenedor">
@@ -73,7 +72,35 @@
         </form>
         </div>
     </div>
-    </div>-->
+    </div>
+
+    
+    <div class="seccion-formulario">
+    <img src="css/img/fondo.jpg" alt="Fondo" class="fondo">
+    
+    <div class="contenedor">
+        <div class="formulario-box">
+        <h2>Contáctanos</h2>
+        <form>
+            <div class="campo">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+            </div>
+            <div class="campo">
+            <label>Correo</label>
+            <input type="email" placeholder="Tu correo">
+            </div>
+            <div class="campo">
+            <label>Mensaje</label>
+            <textarea placeholder="Tu mensaje"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
+    </div>
+    </div>
+
+
 
 <script src="js/script.js"></script>
 
