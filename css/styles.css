@@ -162,6 +162,17 @@
       font-size: 20px;
     }
 
+    .navbar.fixed {
+      position: fixed;
+      top: 0;
+      bottom: auto;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background-color: white;
+    }
+
+
     
     .seccion-formulario {
       position: relative;
