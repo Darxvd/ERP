@@ -77,7 +77,7 @@ const slideInfo = [
     subtitle: 'ESPECIALÍZATE CON NUESTROS',
     title: 'SEMINARIOS',
     title_two: 'HVAC-R',
-    description: 'Capacitaciones para profesionales experimentados en el rubro, aumenta tus conocimientos en temas avanzados como sistemas VRF, Amoníaco, CO2, diseño CAD y muchos más.',
+    description: 'Capacitaciones para profesionales experimentados en el rubro, aumenta tus conocimientos en temas avanzados como sistemas VRF, Amoníaco, CO2, diseño CAD y mucho más.',
     link: '#diplomado',
     dates: ['3 DE AGOSTO', '10 DE AGOSTO']
   }

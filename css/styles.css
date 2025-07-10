@@ -434,7 +434,7 @@ nav {
 }
 
 @media (min-width: 374px) and (max-width: 767px) {
-    .navbar {
+  .navbar {
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
@@ -467,11 +467,6 @@ nav {
     max-height: 500px;
   }
 
-  .navbar-right {
-    margin-top: 10px;
-    justify-content: center;
-  }
-
   .top-nav {
     flex-direction: column;
     height: auto;
@@ -492,14 +487,13 @@ nav {
   }
 
   .email,
-  .bolsa-trabajo {
+  .bolsa-trabajo, .button-inscribete  {
     display: none !important;
   }
 
   .menu-toggle {
     display: block;
   }
-@media (max-width: 767px) {
   .slider-container {
     position: relative;
     text-align: center;
@@ -620,4 +614,3 @@ nav {
 }
 
 
-}
