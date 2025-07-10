@@ -63,7 +63,7 @@ const slideInfo = [
     title_two: 'ACONDICIONADO',
     description: 'Aprende sobre equipos Split, VRV/VRF y las últimas tecnologías del rubro HVAC con nuestro renovado y mejorado que trae el PROGRAMA TÉCNICO DE AIRE ACONDICIONADO.',
     link: '#basico',
-    dates: ['5 DE JULIO', '10 DE JULIO']
+    dates: ['5 DE JULIO', '10 DE JULIO','12 DE JUNIO']
   },
   {
     subtitle: 'SÉ UN ESPECIALISTA EN',
@@ -172,3 +172,22 @@ showSlide(currentIndex);
 setInterval(() => {
   changeSlide(1);
 }, 20000);
+
+const totalMarcas = 10;
+const marcas = [];
+
+for (let i = 1; i <= totalMarcas; i++) {
+  marcas.push(`css/img/marcas/recurso_${i}.svg`);
+}
+
+const track = document.getElementById('slider-track');
+
+const allMarcas = [...marcas, ...marcas];
+
+allMarcas.forEach(src => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = 'Marca patrocinadora';
+  track.appendChild(img);
+});
+
