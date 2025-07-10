@@ -52,12 +52,35 @@
 
 
     <div class="slider-container">
-        <img id="slider-image" src="" alt="Slider" class="slide">
-        <img id="slider-overlay" src="" alt="Overlay" class="slide-overlay">
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
-        <div class="slider-dots" id="slider-dots"></div>
+    <img id="slider-image" src="" alt="Slider" class="slide">
+    <div class="slider-content">
+        <img id="slider-overlay" class="slide-overlay" src="" alt="Overlay">
     </div>
+
+    <div class="slider-info-wrapper">
+        <div id="slider-info" class="slider-info">
+        <h5 id="slide-subtitle"></h5>
+        <h2 id="slide-title"></h2>
+        <h3 id="slide-title-two"></h3>
+        <p id="slide-description"></p>
+
+        <div class="slide-actions">
+            <a id="slide-link" href="#" class="slide-button">Ver más</a>
+            <span class="arrow" onclick="changeSlide(-1)">&#10094;</span>
+            <span class="arrow" onclick="changeSlide(1)">&#10095;</span>
+        </div>
+            <div class="slide-dates-wrapper">
+                <div class="dates-title">Fechas de inicio</div>
+                <div id="slide-dates" class="slide-dates"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="slider-dots" id="slider-dots"></div>
+    </div>
+
+
 
     
 
