@@ -180,7 +180,7 @@ for (let i = 1; i <= totalMarcas; i++) {
   marcas.push(`css/img/marcas/recurso_${i}.svg`);
 }
 
-const track = document.getElementById('slider-track');
+const tracke = document.getElementById('slider-track');
 
 const allMarcas = [...marcas, ...marcas];
 
@@ -188,6 +188,77 @@ allMarcas.forEach(src => {
   const img = document.createElement('img');
   img.src = src;
   img.alt = 'Marca patrocinadora';
-  track.appendChild(img);
+  tracke.appendChild(img);
 });
 
+
+const sedes = [
+  {
+    nombre: "LIMA CENTRO",
+    direccion: "Av. Uruguay 514, Cercado de Lima",
+    imagen: "css/img/sedes/sede-lima.jpg"
+  },
+  {
+    nombre: "PIURA",
+    direccion: "Av. Mariscal Oscar R. Benavides 3866",
+    imagen: "css/img/sedes/sede-trujillo.jpg"
+  },
+  {
+    nombre: "AREQUIPA",
+    direccion: "Av. Próceres De La Independencia 3043",
+    imagen: "css/img/sedes/sede-arequipa.jpg"
+  }
+];
+
+const track = document.getElementById('carousel');
+const leftBtn = document.querySelector('.arrow-left');
+const rightBtn = document.querySelector('.arrow-right');
+
+sedes.forEach(sede => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <img src="${sede.imagen}" alt="${sede.nombre}">
+    <div class="card-content">
+      <h3>${sede.nombre}</h3>
+      <p>${sede.direccion}</p>
+      <div class="explorar-btn">EXPLORAR →</div>
+    </div>
+  `;
+  track.appendChild(card);
+});
+
+let currentIndexs = 0;
+
+function getCardWidth() {
+  const card = document.querySelector('.card');
+  return card ? card.offsetWidth + 20 : 0;
+}
+
+function getVisibleCount() {
+  const container = document.querySelector('.carousel-container');
+  const card = document.querySelector('.card');
+  return card ? Math.floor(container.offsetWidth / getCardWidth()) : 1;
+}
+
+function updateCarousel() {
+  const offset = currentIndexs * getCardWidth();
+  track.style.transform = `translateX(-${offset}px)`;
+}
+
+rightBtn.addEventListener('click', () => {
+  const maxIndex = sedes.length - getVisibleCount();
+  if (currentIndexs < maxIndex) {
+    currentIndex++;
+    updateCarousel();
+  }
+});
+
+leftBtn.addEventListener('click', () => {
+  if (currentIndexs > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+window.addEventListener('resize', updateCarousel);
